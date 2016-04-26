@@ -171,7 +171,7 @@ def triwise(iterable):
 def nwise(iterable, n=2):
     iters = it.tee(iterable, n)
     for i, j in enumerate(iters):
-        next(islice(j, i, i), None)
+        next(it.islice(j, i, i), None)
     return it.izip(*iters)
 
 
